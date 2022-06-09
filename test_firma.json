@@ -30,17 +30,16 @@
         "nombre_or": "Croppi Guillermo"
       }
     },
-    "fileOrigins": {
-      "remote": {
-        "URI": "${urlDocumento}",
-        "method": "GET",
-        "fileList": "${documentos}",
-        "headers": {
-          "Accept": "application/pdf",
-          "Authorization": "Basic ZmRAaW5kcmFmaXJtYToxQXFxcXFxcQ=="
-        }
-      }
-    },
+    "fileOrigins":{
+         "remote":{
+            "URI":"${urlDocumento}?name={$FILE_ID}",
+            "method":"GET",
+            "fileList":"$idArchivos",
+			"headers": {
+                "Accept":"application/pdf"
+            }
+         }
+      },
     "fileDestination": {
       "remote": {
         "URI": "${urlBase}",
